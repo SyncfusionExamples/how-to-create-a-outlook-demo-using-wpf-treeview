@@ -288,5 +288,7 @@ class ItemTemplateSelector : DataTemplateSelector
 
 ![SfTreeView with Outlook appearance](OutlookImage.png)
 
+KB article - [How to create a Outlook demo using WPF TreeView (SfTreeView)?](https://www.syncfusion.com/kb/11983/how-to-create-a-outlook-demo-using-wpf-treeview-sftreeview)
+
 ## Requirements to run the demo
 Visual Studio 2015 and above versions
