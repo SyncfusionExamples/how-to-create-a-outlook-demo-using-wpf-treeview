@@ -4,7 +4,7 @@
 
 This sample illustrates how to create a Outlook demo using SfTreeView.
 
-SfTreeView allows to customize the appearance of each item with different templates based on specific constraints by using the ItemTemplateSelector. To customize the SfTreeView to get an outlook like appearance, you can create and choose different DataTemplate for expander and the mail item at runtime using ItemTemplateSelector.
+[SfTreeView](https://www.syncfusion.com/wpf-controls/treeview) allows to customize the appearance of each item with different templates based on specific constraints by using the [ItemTemplateSelector](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_ItemTemplateSelector). To customize the SfTreeView to get an outlook like appearance, you can create and choose different DataTemplate for expander and the mail item at runtime using ItemTemplateSelector.
 
 ```Xaml
 
@@ -18,11 +18,10 @@ SfTreeView allows to customize the appearance of each item with different templa
                         <ColumnDefinition Width="20" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                <ToggleButton
-                                HorizontalAlignment="Left"
-                                Background="#FFB1D6F0"
-                                IsChecked="{Binding IsUnRead, Mode=TwoWay}"
-                        Visibility="Visible">
+                <ToggleButton HorizontalAlignment="Left"
+                              Background="#FFB1D6F0"
+                              IsChecked="{Binding IsUnRead, Mode=TwoWay}"
+                              Visibility="Visible">
                     <ToggleButton.Style>
                             <Style TargetType="ToggleButton">
                                 <Style.Triggers>
@@ -37,24 +36,22 @@ SfTreeView allows to customize the appearance of each item with different templa
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type ToggleButton}">
-                                            <Border
-                                                        x:Name="border"
-                                                        Width="10"
-                                                        Background="{TemplateBinding Background}"
-                                                        BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="0"
-                                                        SnapsToDevicePixels="True">
-                                                <ContentPresenter
-                                                            x:Name="contentPresenter"
-                                                            Margin="{TemplateBinding Padding}"
-                                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                            Content="{TemplateBinding Content}"
-                                                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                                            ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                            Focusable="False"
-                                                            RecognizesAccessKey="True"
-                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                            <Border x:Name="border"
+                                                    Width="10"
+                                                    Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="0"
+                                                    SnapsToDevicePixels="True">
+                                                <ContentPresenter x:Name="contentPresenter"
+                                                                  Margin="{TemplateBinding Padding}"
+                                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                                  Content="{TemplateBinding Content}"
+                                                                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                                  Focusable="False"
+                                                                  RecognizesAccessKey="True"
+                                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="Button.IsDefaulted" Value="True">
@@ -96,34 +93,29 @@ SfTreeView allows to customize the appearance of each item with different templa
                             <ColumnDefinition Width="10*" />
                         </Grid.ColumnDefinitions>
                     <TextBlock FontWeight="Bold" Text="{Binding SenderDetails}" />
-                        <TextBlock
-                                    Grid.Row="1"
-                                    FontWeight="SemiBold"
-                                    Text="{Binding Subject}"
-                                    TextTrimming="WordEllipsis" />
-                        <TextBlock
-                                    Grid.Row="2"
-                                    Foreground="Gray"
-                                    Text="{Binding Message}"
-                                    TextTrimming="WordEllipsis" />
-                        <Label
-                                    Grid.Row="1"
-                                    Grid.Column="1"
-                                    Height="30"
-                                    Content="{Binding Date}" />
-                        <ToggleButton
-                                    Grid.Column="1"
-                                    IsChecked="{Binding IsFlagged}"
-                                    Visibility="Visible">
+                        <TextBlock Grid.Row="1"
+                                   FontWeight="SemiBold"
+                                   Text="{Binding Subject}"
+                                   TextTrimming="WordEllipsis" />
+                        <TextBlock Grid.Row="2"
+                                   Foreground="Gray"
+                                   Text="{Binding Message}"
+                                   TextTrimming="WordEllipsis" />
+                        <Label Grid.Row="1"
+                               Grid.Column="1"
+                               Height="30"
+                               Content="{Binding Date}" />
+                        <ToggleButton Grid.Column="1"
+                                      IsChecked="{Binding IsFlagged}"
+                                      Visibility="Visible">
                             <ToggleButton.Content>
-                                <Path
-                                            Width="14"
-                                            Height="14"
-                                            Data="M0,1.5480409L2.9240003,1.5480409 2.9240003,44.879043 0,44.879043z M13.070206,1.0048421E-05C19.906545,-0.0069781953,25.467971,3.6343748,
+                                <Path Width="14"
+                                      Height="14"
+                                      Data="M0,1.5480409L2.9240003,1.5480409 2.9240003,44.879043 0,44.879043z M13.070206,1.0048421E-05C19.906545,-0.0069781953,25.467971,3.6343748,
                                     34.017987,0.52327134L34.017987,18.413837C22.617967,22.564965,16.525987,14.707729,5.650989,19.503865L5.650989,1.6083267C8.3709896,0.41004016,10.791426,0.0023394859,13.070206,1.0048421E-05z"
-                                            Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}"
-                                            RenderTransformOrigin="0.5,0.5"
-                                            Stretch="Uniform">
+                                      Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}"
+                                      RenderTransformOrigin="0.5,0.5"
+                                      Stretch="Uniform">
                                     <Path.RenderTransform>
                                         <TransformGroup>
                                             <TransformGroup.Children>
@@ -139,14 +131,13 @@ SfTreeView allows to customize the appearance of each item with different templa
                                     <Setter Property="Template">
                                         <Setter.Value>
                                             <ControlTemplate TargetType="{x:Type ToggleButton}">
-                                                <ContentPresenter
-                                                            Margin="{TemplateBinding Padding}"
-                                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                            RecognizesAccessKey="True"
-                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                            TextElement.FontFamily="Calibri"
-                                                            TextElement.FontSize="23" />
+                                                <ContentPresenter Margin="{TemplateBinding Padding}"
+                                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                                  RecognizesAccessKey="True"
+                                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                                  TextElement.FontFamily="Calibri"
+                                                                  TextElement.FontSize="23" />
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsEnabled" Value="false">
                                                         <Setter Property="Foreground" Value="#ADADAD" />
@@ -169,11 +160,10 @@ SfTreeView allows to customize the appearance of each item with different templa
                                 </Style>
                             </ToggleButton.Style>
                         </ToggleButton>
-                        <Button
-                                    Grid.Row="1"
-                                    Grid.Column="2"
-                            Visibility="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=syncfusion:TreeNodeView}, 
-                                        Converter={StaticResource BooleanToVisibilityConverter}}" >
+                        <Button Grid.Row="1"
+                                Grid.Column="2"
+                                Visibility="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=syncfusion:TreeNodeView}, 
+                                Converter={StaticResource BooleanToVisibilityConverter}}" >
                             <Button.Content>
                                 <Path
                                             Data="F1M108.574,147.6743C108.299,147.1563,107.995,146.3563,107.463,145.4933C107.206,145.0533,106.928,144.5763,106.634,144.0723C106.351,143.5563,105.965,143.0763,105.611,142.5423C104.915,141.4593,104.007,140.4343,103.139,139.3563C102.944,139.1543,102.752,138.9513,102.558,138.7473C102.849,138.4333,103.137,138.1113,103.443,137.8333C103.895,
@@ -184,7 +174,6 @@ SfTreeView allows to customize the appearance of each item with different templa
                                     98.618,143.7993C99.232,142.7423,100.052,141.7363,100.829,140.6753C100.974,140.5123,101.116,140.3473,101.26,140.1823C101.471,140.3413,101.677,140.4973,101.892,140.6543C102.865,141.5213,103.901,142.3513,104.733,143.2683C105.155,143.7193,105.611,144.1233,105.963,144.5703C106.33,145.0093,106.676,145.4233,106.996,145.8063C107.659,146.5623,108.08,147.2843,
                                     108.44,147.7513C108.78,148.2313,108.975,148.5063,108.975,148.5063C108.975,148.5063,108.829,148.2033,108.574,147.6743"
                                             Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
-                                        
                                             RenderTransformOrigin="0.5,0.5"
                                             Stretch="Uniform">
                                     <Path.RenderTransform>
@@ -202,14 +191,13 @@ SfTreeView allows to customize the appearance of each item with different templa
                                     <Setter Property="Template">
                                         <Setter.Value>
                                             <ControlTemplate TargetType="{x:Type Button}">
-                                                <ContentPresenter
-                                                            Margin="{TemplateBinding Padding}"
-                                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                            RecognizesAccessKey="True"
-                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                            TextElement.FontFamily="Calibri"
-                                                            TextElement.FontSize="23" />
+                                                <ContentPresenter Margin="{TemplateBinding Padding}"
+                                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                                  RecognizesAccessKey="True"
+                                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                                  TextElement.FontFamily="Calibri"
+                                                                  TextElement.FontSize="23" />
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsEnabled" Value="false">
                                                         <Setter Property="Foreground" Value="#ADADAD" />
@@ -237,12 +225,11 @@ SfTreeView allows to customize the appearance of each item with different templa
     <DataTemplate x:Key="headerTemplate">
         <Grid x:Name="grid">
             <Grid Grid.Row="0">
-                <Grid Margin="1,0,0,0"
-                                          VerticalAlignment="Center">
+                <Grid Margin="1,0,0,0" VerticalAlignment="Center">
                     <Label Content="{Binding Header}"
-                                               FontSize="11"
-                                               FontWeight="Bold"
-                                               VerticalContentAlignment="Center" />
+                           FontSize="11"
+                           FontWeight="Bold"
+                           VerticalContentAlignment="Center" />
                 </Grid>
             </Grid>
         </Grid>
