@@ -4,7 +4,7 @@
 
 This sample illustrates how to create a Outlook demo using SfTreeView.
 
-SfTreeView allows to customize the appearance of each item with different templates based on specific constraints by using the ItemTemplateSelector. To customize the SfTreeView to get an outlook like appearance, you can create and choose different DataTemplate for expander and the mail item at runtime using ItemTemplateSelector.
+[SfTreeView](https://www.syncfusion.com/wpf-controls/treeview) allows to customize the appearance of each item with different templates based on specific constraints by using the [ItemTemplateSelector](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_ItemTemplateSelector). To customize the SfTreeView to get an outlook like appearance, you can create and choose different DataTemplate for expander and the mail item at runtime using ItemTemplateSelector.
 
 ```Xaml
 
