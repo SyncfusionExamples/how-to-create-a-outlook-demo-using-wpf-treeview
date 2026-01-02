@@ -1,13 +1,10 @@
 # How to create a Outlook demo using WPF TreeView?
 
-## About the sample
+This sample illustrates how to create a Outlook demo using [WPF TreeView](https://www.syncfusion.com/wpf-controls/treeview) (SfTreeView).
 
-This sample illustrates how to create a Outlook demo using SfTreeView.
+`TreeView` allows to customize the appearance of each item with different templates based on specific constraints by using the [ItemTemplateSelector](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_ItemTemplateSelector). To customize the SfTreeView to get an outlook like appearance, you can create and choose different `DataTemplate` for expander and the mail item at runtime using `ItemTemplateSelector`.
 
-[WPF TreeView](https://www.syncfusion.com/wpf-controls/treeview) (SfTreeView) allows to customize the appearance of each item with different templates based on specific constraints by using the [ItemTemplateSelector](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_ItemTemplateSelector). To customize the SfTreeView to get an outlook like appearance, you can create and choose different DataTemplate for expander and the mail item at runtime using ItemTemplateSelector.
-
-```Xaml
-
+```xml
 <Window.Resources>
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     <local:BoolToVisibilityMultiConverter x:Key="BoolToVisibilityMultiConverter" />
